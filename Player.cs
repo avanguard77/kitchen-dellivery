@@ -30,6 +30,6 @@ public class Player : MonoBehaviour
         transform.position += movementvector * Time.deltaTime * moveSpeed;
         
         // transform.LookAt(transform.position + movementvector, Vector3.up);
-        transform.forward =Vector3.Slerp(movementvector, Vector3.up, Time.deltaTime*rotateSpead); 
+        transform.forward =Vector3.Slerp(transform.forward, movementvector, Time.deltaTime*rotateSpead); 
     }
 }
